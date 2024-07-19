@@ -1,0 +1,21 @@
+{
+  "name": "book-app-node",
+  "version": "1.0.0",
+  "description": "Book app created with node.js and express.js for homework purpuses at ITLA's Institution.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  }
+}
