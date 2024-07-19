@@ -1,0 +1,18 @@
+<%- include('../layouts/main') %>
+
+<h1>Books</h1>
+<a href="/books/create">Create New Book</a>
+<ul>
+    <% books.forEach(book => { %>
+        <li>
+            <img src="/images/<%= book.coverImage %>" alt="<%= book.title %>">
+            <h2><%= book.title %></h2>
+            <p>Published in <%= book.publicationYear %></p>
+            <p>Category: <%= book.Category.name %></p>
+            <p>Author: <%= book.Author.name %></p>
+            <p>Publisher: <%= book.Publisher.name %></p>
+            <a href="/books/edit/<%= book.id %>">Edit</a>
+            <a href="/books/delete/<%= book.id %>">Delete</a>
+        </li>
+    <% }) %>
+</ul>
