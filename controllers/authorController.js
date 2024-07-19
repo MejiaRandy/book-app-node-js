@@ -1,7 +1,7 @@
-// controllers/authorController.js
+
 const { Author, Book } = require('../models');
 
-// List all authors
+
 exports.listAuthors = async (req, res) => {
     try {
         const authors = await Author.findAll({
@@ -16,12 +16,12 @@ exports.listAuthors = async (req, res) => {
     }
 };
 
-// Render form to create a new author
+
 exports.createAuthorForm = (req, res) => {
     res.render('authors/create');
 };
 
-// Create a new author
+
 exports.createAuthor = async (req, res) => {
     try {
         const { name, email } = req.body;
@@ -32,7 +32,6 @@ exports.createAuthor = async (req, res) => {
     }
 };
 
-// Render form to edit an author
 exports.editAuthorForm = async (req, res) => {
     try {
         const author = await Author.findByPk(req.params.id);
@@ -42,7 +41,6 @@ exports.editAuthorForm = async (req, res) => {
     }
 };
 
-// Edit an author
 exports.editAuthor = async (req, res) => {
     try {
         const { name, email } = req.body;
@@ -55,7 +53,7 @@ exports.editAuthor = async (req, res) => {
     }
 };
 
-// Delete an author
+
 exports.deleteAuthor = async (req, res) => {
     try {
         await Author.destroy({ where: { id: req.params.id } });

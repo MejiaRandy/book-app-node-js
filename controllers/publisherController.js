@@ -1,7 +1,7 @@
-// controllers/publisherController.js
+
 const { Publisher, Book } = require('../models');
 
-// List all publishers
+
 exports.listPublishers = async (req, res) => {
     try {
         const publishers = await Publisher.findAll({
@@ -16,12 +16,11 @@ exports.listPublishers = async (req, res) => {
     }
 };
 
-// Render form to create a new publisher
+
 exports.createPublisherForm = (req, res) => {
     res.render('publishers/create');
 };
 
-// Create a new publisher
 exports.createPublisher = async (req, res) => {
     try {
         const { name, phone, country } = req.body;
@@ -32,7 +31,7 @@ exports.createPublisher = async (req, res) => {
     }
 };
 
-// Render form to edit a publisher
+
 exports.editPublisherForm = async (req, res) => {
     try {
         const publisher = await Publisher.findByPk(req.params.id);
@@ -42,7 +41,7 @@ exports.editPublisherForm = async (req, res) => {
     }
 };
 
-// Edit a publisher
+
 exports.editPublisher = async (req, res) => {
     try {
         const { name, phone, country } = req.body;
@@ -55,7 +54,7 @@ exports.editPublisher = async (req, res) => {
     }
 };
 
-// Delete a publisher
+
 exports.deletePublisher = async (req, res) => {
     try {
         await Publisher.destroy({ where: { id: req.params.id } });
