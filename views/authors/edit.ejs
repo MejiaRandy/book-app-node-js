@@ -1,0 +1,12 @@
+<%- include('../layouts/main') %>
+
+<h1>Edit Author</h1>
+<form action="/authors/edit/<%= author.id %>" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= author.name %>" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<%= author.email %>" required>
+
+    <button type="submit">Save</button>
+</form>

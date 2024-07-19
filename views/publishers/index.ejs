@@ -1,0 +1,16 @@
+<%- include('../layouts/main') %>
+
+<h1>Publishers</h1>
+<a href="/publishers/create">Create New Publisher</a>
+<ul>
+    <% publishers.forEach(publisher => { %>
+        <li>
+            <h2><%= publisher.name %></h2>
+            <p>Phone: <%= publisher.phone %></p>
+            <p>Country: <%= publisher.country %></p>
+            <p>Books: <%= publisher.Books.length %></p>
+            <a href="/publishers/edit/<%= publisher.id %>">Edit</a>
+            <a href="/publishers/delete/<%= publisher.id %>">Delete</a>
+        </li>
+    <% }) %>
+</ul>

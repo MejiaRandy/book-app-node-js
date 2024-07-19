@@ -1,0 +1,15 @@
+<%- include('../layouts/main') %>
+
+<h1>Create New Publisher</h1>
+<form action="/publishers/create" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" required>
+
+    <button type="submit">Create</button>
+</form>

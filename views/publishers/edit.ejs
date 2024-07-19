@@ -1,0 +1,15 @@
+<%- include('../layouts/main') %>
+
+<h1>Edit Publisher</h1>
+<form action="/publishers/edit/<%= publisher.id %>" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= publisher.name %>" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" value="<%= publisher.phone %>" required>
+
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="country" value="<%= publisher.country %>" required>
+
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,15 @@
+<%- include('../layouts/main') %>
+
+<h1>Categories</h1>
+<a href="/categories/create">Create New Category</a>
+<ul>
+    <% categories.forEach(category => { %>
+        <li>
+            <h2><%= category.name %></h2>
+            <p><%= category.description %></p>
+            <p>Books: <%= category.Books.length %></p>
+            <a href="/categories/edit/<%= category.id %>">Edit</a>
+            <a href="/categories/delete/<%= category.id %>">Delete</a>
+        </li>
+    <% }) %>
+</ul>

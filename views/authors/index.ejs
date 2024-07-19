@@ -1,0 +1,15 @@
+<%- include('../layouts/main') %>
+
+<h1>Authors</h1>
+<a href="/authors/create">Create New Author</a>
+<ul>
+    <% authors.forEach(author => { %>
+        <li>
+            <h2><%= author.name %></h2>
+            <p><%= author.email %></p>
+            <p>Books: <%= author.Books.length %></p>
+            <a href="/authors/edit/<%= author.id %>">Edit</a>
+            <a href="/authors/delete/<%= author.id %>">Delete</a>
+        </li>
+    <% }) %>
+</ul>
